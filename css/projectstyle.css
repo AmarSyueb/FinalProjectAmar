@@ -297,6 +297,9 @@
     flex-direction: row;
     justify-content: flex-start;
 }
+.sliderbutton:hover{
+    cursor: pointer;
+}
 .slideleftbtn, .sliderightbtn{
     position: absolute;
     z-index: 2;
