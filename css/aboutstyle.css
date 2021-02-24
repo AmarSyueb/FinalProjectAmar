@@ -77,7 +77,9 @@
     padding: 5px 60px 5px 20px;
 }
 /* End of Title section */
-
+.about-title-con h1{
+    margin: auto;
+}
 /* Welcome Section */
 .about-welcome-con{
     width: 100%;
@@ -117,7 +119,34 @@
     height: 80%;
 }
 /* End of Welcome Section */
-
+@media(max-width:414px){
+    .about-welcome-con{
+        height: fit-content;
+        flex-direction: column;
+    }
+    .welcomeimg{
+        width: 370px;
+        height: 300px;
+    }
+    .welcome-text{
+        width: 370px;
+        height: fit-content;
+    }
+    .welcome-text h2{
+        margin-left: 0px!important;
+        text-align: center;
+    }
+    .welcome-text p{
+        margin-left: 0px!important;
+        text-align: center;
+    }
+    .welcome-text-desc{
+        height: fit-content;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
 /* Our Skill Section */
 .about-ourskill-con{
     display: flex;
@@ -209,7 +238,22 @@
     width: 0px;
 }
 /* End of Our Skill Section */
-
+@media(max-width:414px){
+    .about-ourskill-con{
+        height: fit-content;
+        
+    }
+    .ourskill-content{
+        grid-template-columns: repeat(1,370px);
+        width: 390px;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+    .skills{
+        width: 370px;
+        margin: auto;
+    }
+}
 /* Our Team Section */
 .about-ourteam-con{
     display: flex;
@@ -275,7 +319,15 @@
     cursor: pointer;
 }
 /* End of Our Team Section */
-
+@media(max-width:414px){
+    .about-ourteam-con{
+        height: fit-content;
+    }
+    .ourteam-bottom{
+        height: fit-content;
+        grid-template-columns: repeat(1,300px);
+    }
+}
 /* Member Pop Section */
 #memberpop{
     width: 100%;
@@ -329,7 +381,20 @@
     height: 400px;
 }
 /* End of Member Pop Section */
-
+@media(max-width:414px){
+    .memberpop-container{
+        width: 370px;
+        height: 517px;
+    }
+    .memberpop-image{
+        width: 340px;
+        height: 340px;
+    }
+    .memberpop-image img{
+        width: 340px;
+        height: 340px;
+    }
+}
 /* Footer */
 footer{
     width: 100%;
@@ -570,3 +635,62 @@ footer{
     font-size: 10px;
 }
 /* End of Photo Stream Pop Section */
+@media(max-width: 414px){
+    /* HEADER QUERY */
+    #headsec{
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+    #navigation{
+        flex-direction: column;
+    }
+    .logo{
+        padding-left: 0px;
+    }
+    .navbar{
+        padding-right: 0px;
+    }
+    .navlist{
+        margin: 3px 3px;
+        height: 50px;
+    }
+    /* FOOTER QUERY */
+    footer{
+        height: 2200px;
+    }
+    .footertop{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 2200px;
+    }
+    .footsec1{
+        height: fit-content;
+    }
+    .footsec2{
+        height: fit-content;
+    }
+    .foot-about{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    .foot-photo{
+        margin-left: 10px;
+    }
+    .footerbottom{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .photoclass{
+        grid-template-columns: repeat(1,140px);
+        grid-row-gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}

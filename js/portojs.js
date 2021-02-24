@@ -1,6 +1,11 @@
 function listingtheprojects(nameofclass){
     removethisproject(nameofclass)
     var classlist = document.getElementsByClassName(nameofclass)
+    var idmaxwidth = document.getElementById("mainbodyportofolio")
+    var getMaxWidth = window.getComputedStyle(idmaxwidth,null).getPropertyValue("width")
+    var widthtrue = lookforwidth(getMaxWidth)
+    console.log(widthtrue)
+
     if(classlist.length==0){
         document.getElementById("listport").style.height="460px"
     }
@@ -11,7 +16,12 @@ function listingtheprojects(nameofclass){
         if(i==0){
             leftpos = 3
         }else{
-            leftpos+=24
+            if(widthtrue <= 414){
+                leftpos+=75
+            }else{
+                leftpos+=24
+            }
+            
         }
 
         if(leftpos>75){
@@ -30,10 +40,24 @@ function listingtheprojects(nameofclass){
         toppos = 0
         currentheight = 0
     }
+    
 
 }
 
-
+function lookforwidth(number){
+    var array = [0,1,2,3,4,5,6,7,8,9]
+    var count = 0;
+    for(i=0;i<number.length;i++){
+        for(j=0; j<array.length; j++){
+            if(number[i]==array[j]){
+                count+=1;
+            }
+        }
+    }
+    var newNumber = number.slice(0,count)
+    var numbernonstring = newNumber*1;
+    return numbernonstring
+}
 
 
 // function listAll(){
@@ -263,7 +287,6 @@ function removeList(name){
     for(k=0; k<classlist.length; k++){
         var idprojectall = document.getElementsByClassName(name)[k].id;
         document.getElementById(idprojectall).style.left = "-500px";
-        console.log(idprojectall)
     }
 }
 

@@ -3,7 +3,9 @@
     padding: 0;
     scroll-behavior: smooth;
 }
-
+#mainbodyportofolio{
+    width: 100%;
+}
 /* Header Section */
 #headsec{
     display: flex;
@@ -97,7 +99,11 @@
     font-weight: 500;
 }
 /* End of Title section */
-
+@media(max-width: 414px){
+    .porto-title-con h1{
+        margin: auto;
+    }
+}
 /* Porto Section */
 .portofolio-sec{
     width: 100%;
@@ -198,7 +204,16 @@
     opacity: 1;
 }
 /* End of Porto Section */
-
+@media(max-width:414px){
+    .list_button{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .project{
+        width: 350px;
+        height: 350px;
+    }
+}
 /* Proto Content */
 .proimg{
     width: 400px;
@@ -255,7 +270,26 @@
 }
 
 /* End of Proto Content */
-
+@media(max-width:414px){
+    .proimg{
+        width: 350px;
+        height: 280px;
+    }
+    .proimg img{
+        width: 350px;
+        height: 280px;
+    }
+    .protext p{
+        font-size: 15px;
+    }
+    .prodesc{
+        width: 350px;
+    }
+    .prolikes p{
+        margin-right: 0px;
+    }
+    
+}
 /* Footer */
 footer{
     width: 100%;
@@ -496,3 +530,62 @@ footer{
     font-size: 10px;
 }
 /* End of Photo Stream Pop Section */
+@media(max-width: 414px){
+    /* HEADER QUERY */
+    #headsec{
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+    #navigation{
+        flex-direction: column;
+    }
+    .logo{
+        padding-left: 0px;
+    }
+    .navbar{
+        padding-right: 0px;
+    }
+    .navlist{
+        margin: 3px 3px;
+        height: 50px;
+    }
+    /* FOOTER QUERY */
+    footer{
+        height: 2200px;
+    }
+    .footertop{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 2200px;
+    }
+    .footsec1{
+        height: fit-content;
+    }
+    .footsec2{
+        height: fit-content;
+    }
+    .foot-about{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    .foot-photo{
+        margin-left: 10px;
+    }
+    .footerbottom{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .photoclass{
+        grid-template-columns: repeat(1,140px);
+        grid-row-gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
